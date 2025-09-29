@@ -1,0 +1,238 @@
+/* Basic page layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6fff6; /* light green background */
+  color: #1f2d24;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 18px auto;
+  padding: 16px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #2e8b57, #54c67b);
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+  font-weight: 600;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  width: 420px;
+}
+
+/* Make hero image fit and not overflow */
+.hero-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Headings and lead text */
+h1 {
+  color: #114d2b;
+  margin: 0 0 8px 0;
+  font-size: 28px;
+}
+
+.lead {
+  color: #53625a;
+  margin: 0 0 12px 0;
+}
+
+/* Buttons */
+.btn {
+  background: #114d2b;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #114d2b;
+  border: 2px solid #dff6e9;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Thumbnail images under hero text */
+.thumbs {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.thumbs img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Simple card look for sections */
+.card {
+  background: white;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* Stats layout */
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.stat {
+  background: #f2fff3;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+}
+
+.stat .num {
+  font-weight: 800;
+  color: #114d2b;
+  font-size: 20px;
+}
+
+/* Events list */
+.events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.events li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.events img {
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Form styles */
+form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #114d2b;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #e9f5ed;
+  background: #fbfffb;
+  font-size: 14px;
+}
+
+/* two-column rows in the form */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* Form actions */
+.form-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #54c67b, #74d88f);
+  color: white;
+  text-align: center;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 780px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-right {
+    width: 100%;
+  }
+  .stats {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: column;
+  }
+  nav {
+    margin-top: 8px;
+  }
+}

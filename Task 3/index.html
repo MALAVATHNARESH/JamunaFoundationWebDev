@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donation Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Donation Calculator</h1>
+
+    <div id="result" class="screen" aria-live="polite">Enter an amount</div>
+
+    <input id="amount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="₹ 0.00" />
+
+    <div class="grid">
+      <button id="showAmount" class="btn primary">Show Amount</button>
+      <button id="showImpact" class="btn accent">Trees Planted</button>
+      <button id="tenPercent" class="btn ghost">10% Recurring</button>
+      <button id="reset" class="btn full">Reset</button>
+    </div>
+
+    <div class="meta">
+      <div><strong>Rate</strong> <span id="rateLabel">1 tree per ₹5</span></div>
+      <div>
+        <select id="currency">
+          <option value="INR">INR ₹</option>
+          <option value="USD">USD $</option>
+          <option value="EUR">EUR €</option>
+        </select>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
